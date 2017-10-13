@@ -63,81 +63,55 @@ int orr(int a, int b) {
 int main() {
 	while (1) {
 		cout « endl
-		« "Выберите оператор [+, -, *, /, %, ^, !, &, |, <, >]" « endl;
-		char operand;
-		cin » operand;
-		int a, b;
-		switch (operand) {
+		« "Выберите операцию [+, -, *, /, %, ^, !, &, |, <, >]" « endl;
+		cin >> x;
+		if (x != '<' || x != '>' || x != '!' || x !='^')
+		{
+			cout << "Введите 1 число";
+			cin >> a;
+			cout << "Введите 2 число";
+			cin >> b;
+		}
+		else
+		{
+			cout << "Введите число";
+			cin >> a;
+		}
+		switch (x) {
 			case '+':
-				cout « "Введите перове число" « endl;
-				cin » a;
-				cout « "Введите второе число" « endl;
-				cin » b;
 				cout « add(a, b) « endl;
 				break;
 			case '-':
-				cout « "Введите первое число" « endl;
-				cin » a;
-				cout « "Введите второе число" « endl;
-				cin » b;
 				cout « sub(a, b) « endl;
 				break;
 			case '*':
-				cout « "Введите первое число" « endl;
-				cin » a;
-				cout « "Введите второе число" « endl;
-				cin » b;
 				cout « mul(a, b) « endl;
 				break;
 			case '/':
-				cout « "Введите первое число" « endl;
-				cin » a;
-				cout « "Введите второе число" « endl;
-				cin » b;
 				if (b != 0) {
 					cout « div(double(a), b) « endl;
 				} else
 					cout « "Ошибка. Деление на ноль" « endl;
 				break;
 			case '%':
-				cout « "Введите первое число" « endl;
-				cin » a;
-				cout « "Введите второе число" « endl;
-				cin » b;
 				cout « mod(a, b) « endl;
 				break;
 			case '^':
-				cout « "Ведите число" « endl;
-				cin » a;
 				cout « pow((double)a);
 				break;
 			case '<':
-				cout « "Введите число" « endl;
-				cin » a;
 				cout « rol(a) « endl;
 				break;
 			case '>':
-				cout « "Введите число" « endl;
-				cin » a;
 				cout « ror(a) « endl;
 				break;
 			case '!':
-				cout « "Введите число" « endl;
-				cin » a;
 				cout « nott(a) « endl;
 				break;
 			case '&':
-				cout « "Введите первое число" « endl;
-				cin » a;
-				cout « "Введите второе число" « endl;
-				cin » b;
 				cout « andd(a, b) « endl;
 				break;
 			case '|':
-				cout « "Введите первое число" « endl;
-				cin » a;
-				cout « "Введите второе число" « endl;
-				cin » b;
 				cout « orr(a, b) « endl;
 				break;
 			default:
